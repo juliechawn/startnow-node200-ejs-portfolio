@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<title>Julie Hawn</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Mr+De+Haviland|Open+Sans+Condensed:300" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font: black;
+    color: #000;
+  }
+
+  .julie {
+    height: 300px;
+  }
+
+  header,
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  header {
+    background-color: rgb(209, 104, 14);
+  }
+
+  .hello-text {
+    font-size: 100px;
+    padding: 20px;
+    letter-spacing: 10px;
+    align-self: center;
+  }
+
+  #about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name-div {
+    border-bottom: 10px solid black;
+    font-size: 48px;
+    text-align: center;
+    align-self: center;
+    padding-top: 20px;
+ 
+  }
+
+  .title-div {
+    font-size: 32px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+    align-self: center;
+  }
+
+  .skills-div {
+    text-align: center;
+    align-self: center;
+    word-spacing: 10px;
+    padding-bottom: 20px;
+  }
+
+  .skills-text {
+    
+  }
+
+  .contact-buttons {
+    text-align: center;
+    align-self: center;
+  }
+
+  #button {
+    width: 150px;
+    margin: 10px;
+  }
+
+  #work {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+  }
+
+  .work-title {
+    border-bottom: 10px solid black;
+    font-size: 32px;
+    align-self: center;
+  }
+
+  .work-image {
+    padding: 5px;
+  }
+
+  #contact {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .contact-title {
+    border-bottom: 10px solid black;
+    font-size: 32px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .grey {
+    color: rgb(90, 103, 118);
+  }
+
+</style>
+
+<body>
+
+  <header>
+    <div>
+      <img class="julie" src="https://i.imgur.com/kLRtkcV.png" alt="julie">
+    </div>
+    <div class="hello-text">
+      <text>Hello!</text>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="name-div">
+      <text class="name">JULIE HAWN</text>
+    </div>
+
+    <div class="title-div">
+      <text class="title">Web Developer in San Diego</text>
+    </div>
+    <div class="skills-div"><text class="skills-text">JavaScript Node.js React HTML CSS</text></div>
+    <div class="contact-buttons">
+      <a href="#contact"><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom" id="button">Contact Me</button></a>
+      <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom" id="button">Download Resume</button>
+    </div>
+  </section>
+
+
+  <section id="work">
+    <div class="contact-title-div">
+      <text class="contact-title">WORK</text>
+      <p>Click each project to see more information.</p>
+    </div>
+
+    <div class="">
+      <div class="w3-third">
+        <img class="work-image" src="https://i.imgur.com/QkpogKu.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      </div>
+      <div class="w3-third">
+        <img class="work-image" src="https://i.imgur.com/QkpogKu.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      </div>
+      <div class="w3-third">
+        <img class="work-image" src="https://i.imgur.com/QkpogKu.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact-title-div">
+      <text class="contact-title">CONTACT</text>
+    </div>
+    <div class="form">
+      <form action="/thanks" method="POST">
+        <div class="w3-section">
+          <label for="name">Name</label>
+          <input id="name" class="w3-input w3-border" type="text" name="name" required>
+        </div>
+        <div class="w3-section">
+          <label for="email">Email</label>
+          <input class="w3-input w3-border" id="email" type="text" name="Email" required>
+        </div>
+        <div class="w3-section">
+          <label>Message</label>
+          <input class="w3-input w3-border" type="text" name="Message" required>
+        </div>
+        <button id="submitBtn" type="submit" class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-block w3-margin-bottom">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="w3-container w3-black">
+    <p>Julie Hawn 2018</p>
+  </footer>
+  <script>
+
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+
+  </script>
+
+
+</body>
+
+</html>
