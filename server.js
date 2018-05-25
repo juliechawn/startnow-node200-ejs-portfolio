@@ -4,10 +4,6 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-// const accountSid = 'ACb66dcfd46009eda5e3ee13952d4a270c';
-// const authToken = '225b5c59dfb79c5b80f36824de711a9d';
-// const client = require('twilio')(accountSid, authToken);
-
 app.use(morgan('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -29,8 +25,6 @@ app.get('/', (req, res) => {
 app.post('/thanks', (req, res) => {
   res.render('thanks', { index: req.body })
 });
-
-
 
 app.get("*", function(req,res){
   res.send("Error: No such page!");
