@@ -30,6 +30,6 @@ app.get("*", function(req,res){
   res.send("Error: No such page!");
 });
 
-app.listen(8080, () => {
-  console.log('listening at http://localhost:8080');
-});
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => console.log(`Server is listening on http://localhost:${PORT}`));
