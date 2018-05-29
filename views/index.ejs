@@ -11,16 +11,13 @@
 <style>
   body {
     font-family: 'Open Sans Condensed', sans-serif;
-    font: black;
-    color: #000;
-    /* background-color: rgb(90, 103, 118, 0.13); */
+    color: black;
   }
 
   .julie {
     height: 300px;
   }
 
-  header,
   section {
     display: flex;
     flex-wrap: wrap;
@@ -28,30 +25,42 @@
     font-size: 16px;
   }
 
-  header {
-    background-color: rgb(209, 104, 14);
-  }
-
   .hello-text {
     font-size: 100px;
     padding: 20px;
-    letter-spacing: 10px;
     align-self: center;
-    /* color: white; */
   }
 
   #about {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  
+  #image-title-div {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(225, 225, 225, 0.6);
+    /* background-color: rgb(90, 103, 118, 0.5); */
+    padding: 10px;
+    width: 100%;
+  }
+
+  .background-image{
+    background-image: url('https://i.imgur.com/kUwFHzU.jpg');
+    background-size: cover;
+  }
+
+  .name-title-div {
+    text-align: center;
+    align-self: center;
   }
 
   .name-div {
-    border-bottom: 10px solid black;
+    border-bottom: 5px solid black;
     font-size: 48px;
-    text-align: center;
-    align-self: center;
     padding-top: 20px;
-
   }
 
   .title-div {
@@ -60,6 +69,7 @@
     padding-bottom: 5px;
     text-align: center;
     align-self: center;
+    
   }
 
   .skills-div {
@@ -69,9 +79,7 @@
     padding-bottom: 20px;
   }
 
-  .skills-text {
-
-  }
+  .skills-text {}
 
   .contact-buttons {
     text-align: center;
@@ -81,88 +89,164 @@
   #button {
     width: 150px;
     margin: 10px;
+    background-color: white;
+    color: black;
   }
+
+  #button:hover{
+    background-color: rgb(128, 94, 92);
+    color: white;
+  }
+
+  /* #white-space {
+    background-color: white;
+    height: 5px;
+  } */
 
   #work {
     display: flex;
     flex-direction: column;
-    width: 90%;
     margin: auto;
+    /* padding-bottom: 50px; */
+    /* background-color: rgb(136, 154, 167); */
+  }
+
+  .work-title-div {
+    padding-left: 50px;
+    padding-top: 5px;
+  
   }
 
   .work-title {
-    border-bottom: 10px solid black;
-    font-size: 32px;
+    font-size: 48px;
+    letter-spacing: 2px;
     align-self: center;
+    width: 90%;
   }
 
-  .work-images-div{
-   
+  .work-images-div {
+    width: 100%;
+    align-content: center;
+    padding: 25px;
   }
 
   .work-image {
-    padding: 5px;  
+    padding: 5px;
+    max-width: 400px;
   }
 
+  /* .image-caption {
+    display: flex;
+    flex-direction: row;
+    background-color: white; 
+  } */
+
+ #img01 {
+
+ }
+
+  .caption {
+    color: white;
+    margin-top: 50%;
+  }
+
+  #x {
+    color: white;
+  }
+
+.white-background {
+  /* background-color: white; */
+  /* padding: 10px; */
+}
+
   #contact {
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
     padding-top: 10px;
+    color: black;
   }
 
   .contact-title {
-    border-bottom: 10px solid black;
-    font-size: 32px;
+    font-size: 48px;
+    padding-left: 50px;
   }
 
-  footer {
-    text-align: center;
-    background-color: rgb(209, 104, 14);
+form {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.submit-button {
+  background-color: white;
+  color: black;
+}
+
+  .submit-button:hover {
+    background-color: rgb(128, 94, 92);
     color: white;
   }
 
+  footer {
+    height: 100px;
+    background-image: url('https://i.imgur.com/kUwFHzU.jpg');
+    background-size: cover;
+    /* padding-top: 25px;
+    padding-bottom: 25px; */
+  }
+
+.linkedin {
+  max-height: 50px;
+}
+
+.github {
+  max-height: 50px;
+}
+
+  #footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
 </style>
 
 <body>
+    <!-- <div id="white-space"></div> -->
+  <section id="about" class="background-image">
 
-  <header>
-    <div>
+    <div id="image-title-div">
+    <div class="about-picture">
       <img class="julie" src="https://i.imgur.com/kLRtkcV.png" alt="julie">
     </div>
-    <div class="hello-text">
-      <text>Hello!</text>
-    </div>
-  </header>
 
-  <section id="about">
-    <div class="name-div">
-      <text class="name">JULIE HAWN</text>
+    <div class="name-title-div">
+      <text class="name-div">JULIE HAWN</text>
+      <div class="title-div">
+        <text class="title">Web Developer in San Diego</text>
+      </div>
+      <div class="skills-div">
+        <text class="skills-text">JavaScript Node.js React HTML CSS</text>
+      </div>
+      <div class="contact-buttons">
+        <a href="#contact"><button class="w3-padding-large w3-margin-top w3-margin-bottom" id="button">Contact Me</button></a>
+        <button class="w3-padding-large w3-margin-top w3-margin-bottom" id="button">Download Resume</button>
+      </div>
     </div>
-
-    <div class="title-div">
-      <text class="title">Web Developer in San Diego</text>
-    </div>
-    <div class="skills-div">
-      <text class="skills-text">JavaScript Node.js React HTML CSS</text>
-    </div>
-    <div class="contact-buttons">
-      <a href="#contact"><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom" id="button">Contact Me</button></a>
-      <button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom" id="button">Download Resume</button>
-    </div>
+  </div>
   </section>
-
+<!-- <div id="white-space"></div> -->
 
   <section id="work">
-    <div class="contact-title-div">
-      <text class="contact-title">WORK</text>
-      <p>Click each project to see more information.</p>
+    <div class="work-title-div">
+      <text class="work-title">WORK</text>
+      <br />
+      <text>Click each project to see more information.</text>
     </div>
 
     <div class="work-images-div">
       <div class="w3-third">
-        <img id="t-rex" class="work-image" src="https://i.imgur.com/QkpogKu.jpg" style="width:100%" onclick="onClickTrex(this)" alt="Thesaurus-REX is an interactive React App">
+        <img id="t-rex" class="work-image" src="https://i.imgur.com/pXwjMgW.png" style="width:100%" onclick="onClickTrex(this)" alt="Thesaurus-REX is an interactive React App">
       </div>
       <div class="w3-third">
         <img class="work-image" src="https://i.imgur.com/QkpogKu.jpg" style="width:100%" onclick="onClickTrex(this)" alt="">
@@ -176,15 +260,24 @@
   <!-- Modal for full size images on click-->
 
 
-    <div id="modal01" class="w3-modal" style="padding-top:0" onclick="this.style.display='none'">
-        <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-        <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+  <div id="modal01" class="w3-modal" style="padding-top:0" onclick="this.style.display='none'">
+    
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <span id="x" class="w3-button w3-xlarge w3-display-topright">×</span>
+         <div class="w3-half">
+          <div class="caption" id="caption"></div>
+          <a href="" target"_blank"><button class="w3-padding-large w3-margin-top w3-margin-bottom" id="button">Open App</button></a>
+        </div> 
+        <div class="w3-half">
           <img id="img01" class="w3-image">
-          <p id="caption"></p>
-        </div>
-      </div>
+          </div>
+
+      
+    </div>
+  </div>
   </section>
 
+  
   <section id="contact">
     <div class="contact-title-div">
       <text class="contact-title">CONTACT</text>
@@ -204,14 +297,18 @@
         <label>Message</label>
         <input id="message" class="w3-input w3-border" type="text" name="message" required>
       </div>
-      <button id="submit-form" type="submit" class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom w3-block w3-margin-bottom">Send Message</button>
+      <button id="submit-form" type="submit" class="submit-button w3-padding-large w3-margin-top w3-margin-bottom w3-block w3-margin-bottom">Send Message</button>
     </form>
     </div>
   </section>
 
-  <footer class="w3-container w3-black">
-    <p>Julie Hawn 2018</p>
-  </footer>
+  <section id="footer" class="background-image">
+    <div id="image-title-div">
+      <a href="https://www.linkedin.com/in/julie-cappa-hawn-07609435/" target="_blank"><image class="linkedin" src="https://i.imgur.com/BqLUflx.png" alt="linkedin"></a>
+      <a href="https://github.com/juliechawn" target="_blank"><image class="github" src="https://i.imgur.com/WamNrMC.png" alt="github"></a>
+    </div>
+  </section>
+
   <script>
 
     // Modal Image Gallery
@@ -222,28 +319,28 @@
       captionText.innerHTML = element.alt;
     }
 
-       function onClickTrex(element) {
+    function onClickTrex(element) {
       document.getElementById("img01").src = "https://i.imgur.com/avUEgbW.png";
       document.getElementById("modal01").style.display = "block";
       var captionText = document.getElementById("caption");
       captionText.innerHTML = element.alt;
     }
 
-        function onClickTrex(element) {
+    function onClickTrex(element) {
       document.getElementById("img01").src = "https://i.imgur.com/avUEgbW.png";
       document.getElementById("modal01").style.display = "block";
       var captionText = document.getElementById("caption");
       captionText.innerHTML = element.alt;
     }
 
- 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyDJ4tlnRp9ojD1oP7ZGHRQ2AnyAvpfCfXzeaAXAzkEec8-HAI/exec'  
-  const form = document.forms['contact']  
-  form.addEventListener('submit', e => {  
-   fetch(scriptURL, { method: 'POST', body: new FormData(form)})  
-    .then(response => console.log('Success!', response))  
-    .catch(error => console.error('Error!', error.message))  
-  }) 
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyDJ4tlnRp9ojD1oP7ZGHRQ2AnyAvpfCfXzeaAXAzkEec8-HAI/exec'
+    const form = document.forms['contact']
+    form.addEventListener('submit', e => {
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
 
   </script>
 
