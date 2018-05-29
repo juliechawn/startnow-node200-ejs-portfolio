@@ -30,6 +30,8 @@ app.get("*", function(req,res){
   res.send("Error: No such page!");
 });
 
+app.get('/favicon.ico', (req, res) => res.status(204));
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => console.log(`Server is listening on http://localhost:${PORT}`));
